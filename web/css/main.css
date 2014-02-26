@@ -1,0 +1,25 @@
+body {
+	font-family: robotoregular, sans;
+	font-size: 1.4em;
+	font-weight: normal;
+	font-style: normal;
+	background: rgb(49, 49, 49) url(/images/bg_body.png);
+	color: rgb(241,241,241);
+	line-height: 1;
+}
+
+.container-fluid {
+	background: url(/images/bg_pattern2.png);
+	border-top: 5px solid #1b80c6;
+	border-bottom: 5px solid #1b80c6;
+}
+
+h1 {
+	font-family: economicaregular;
+	font-size: 34px;
+	font-weight: normal;
+	color: #44a5e9;
+	margin: 0;
+	text-align: center;
+	line-height: 1;
+}

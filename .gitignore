@@ -2,4 +2,8 @@
 *.iml
 .idea
 
+# Yii-specific
+config/db.php
+data
+
 composer.lock

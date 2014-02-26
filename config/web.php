@@ -1,7 +1,6 @@
 <?php
 
 $params = require(__DIR__ . '/params.php');
-$db = require(__DIR__ . '/db.php');
 
 $config = [
 	'id' => 'basic',
@@ -11,17 +10,17 @@ $config = [
 		'cache' => [
 			'class' => 'yii\caching\FileCache',
 		],
-		'user' => [
+		/*'user' => [
 			'identityClass' => 'app\models\User',
 			'enableAutoLogin' => true,
-		],
+		],*/
 		'errorHandler' => [
-			'errorAction' => 'site/error',
+			//'errorAction' => 'site/error',
 		],
-		'mail' => [
+		/*'mail' => [
 			'class' => 'yii\swiftmailer\Mailer',
 			'useFileTransport' => true,
-		],
+		],*/
 		'log' => [
 			'traceLevel' => YII_DEBUG ? 3 : 0,
 			'targets' => [
@@ -31,7 +30,21 @@ $config = [
 				],
 			],
 		],
-		'db' => $db,
+//		'db' => $db,
+		'urlManager' => [
+			'enablePrettyUrl' => true,
+			'showScriptName' => false,
+			'rules' => [
+				'/' => 'default/index',
+				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+			],
+		],
+		'view' => [
+			'theme' => [
+				'pathMap' => ['@app/views' => '@app/themes/ez'],
+				'baseUrl' => '@app/themes/ez',
+			],
+		],
 	],
 	'params' => $params,
 ];
