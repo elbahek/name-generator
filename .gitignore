@@ -1,3 +1,5 @@
 # IDE-specific
 *.iml
 .idea
+
+composer.lock
