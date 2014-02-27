@@ -23,3 +23,36 @@ h1 {
 	text-align: center;
 	line-height: 1;
 }
+
+.btn-group button {
+	border: 0 none;
+}
+
+.btn-group button:hover {
+	color: #FFF;
+}
+
+.btn-group button.active {
+	/*box-shadow: none;*/
+	color: #FFF;
+}
+
+.btn-group-green button {
+	border-bottom: 3px solid #15985c;
+	background-color: #1bc678;
+}
+
+.btn-group-green button.active,
+.btn-group-green button:hover {
+	background-color: #15985c;
+}
+
+.btn-group-blue button {
+	border-bottom: 3px solid #156398;
+	background-color: #1b80c6;
+}
+
+.btn-group-blue button.active,
+.btn-group-blue button:hover {
+	background-color: #156398;
+}

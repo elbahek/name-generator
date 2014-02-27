@@ -41,7 +41,7 @@ class NameGeneratorForm extends Model
 		return [
 			[['race', 'nameType', 'numberOfNames'], 'required'],
 			[['race'], 'number', 'integerOnly' => true, 'min' => static::RACE_HUMAN, 'max' => static::RACE_DOMINATOR],
-			[['nameType'], 'number', 'integerOnly' => true, 'min' => static::NAME_TYPE_PIRATE, 'max' => static::NAME_TYPE_ANY],
+			[['nameType'], 'number', 'integerOnly' => true, 'min' => static::NAME_TYPE_ANY, 'max' => static::NAME_TYPE_ANY],
 			[['numberOfNames'], 'number', 'integerOnly' => true, 'min' => 1, 'max' => 10],
 		];
 	}

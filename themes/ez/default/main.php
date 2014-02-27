@@ -3,7 +3,7 @@
  * @var app\models\NameGeneratorForm $formModel
  */
 
-use yii\bootstrap\ButtonGroup;
+use app\widgets\PrettyRadios;
 use yii\widgets\ActiveForm;
 ?>
 
@@ -15,13 +15,23 @@ use yii\widgets\ActiveForm;
 				'id' => 'generate-names-form',
 				'options' => ['class' => 'form-horizontal'],
 				'fieldConfig' => [
-					'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
-					'labelOptions' => ['class' => 'col-lg-1 control-label'],
+					'labelOptions' => ['class' => 'control-label'],
 				],
 			]); ?>
-			<?= $form->field($formModel, 'race')->radioList($formModel->getRaces()); ?>
-			<?= '' ?>
-			<?= $form->field($formModel, 'nameType')->radioList($formModel->getNameTypes()); ?>
+			<?= PrettyRadios::widget([
+				'options' => $formModel->getRaces(),
+				'form' => $form,
+				'formModel' => $formModel,
+				'formAttribute' => 'race',
+				'color' => 'green',
+			]) ?>
+			<?= PrettyRadios::widget([
+				'options' => $formModel->getNameTypes(),
+				'form' => $form,
+				'formModel' => $formModel,
+				'formAttribute' => 'nameType',
+				'color' => 'blue',
+			]) ?>
 			<?= $form->field($formModel, 'numberOfNames') ?>
 			<?php ActiveForm::end() ?>
 		</div>
