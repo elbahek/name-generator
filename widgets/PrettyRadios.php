@@ -11,6 +11,7 @@ class PrettyRadios extends Widget
 	public $form;
 	public $formModel;
 	public $formAttribute;
+	public $defaultOption;
 	public $color = 'blue';
 
 	/**
@@ -30,6 +31,7 @@ class PrettyRadios extends Widget
 				'formModel' => $this->formModel,
 				'formAttribute' => $this->formAttribute,
 				'color' => $this->color,
+				'defaultOption' => $this->defaultOption,
 			]);
 		}
 	}

@@ -9,9 +9,11 @@ body {
 }
 
 .container-fluid {
+	margin-top: 2em;
 	background: url(/images/bg_pattern2.png);
 	border-top: 5px solid #1b80c6;
 	border-bottom: 5px solid #1b80c6;
+	padding: 15px 0;
 }
 
 h1 {
@@ -22,6 +24,15 @@ h1 {
 	margin: 0;
 	text-align: center;
 	line-height: 1;
+}
+
+.pretty-radios-wrapper #namegeneratorform-race,
+.pretty-radios-wrapper #namegeneratorform-nametype {
+	display: none;
+}
+
+.pretty-radios {
+	display: block;
 }
 
 .btn-group button {
@@ -55,4 +66,39 @@ h1 {
 .btn-group-blue button.active,
 .btn-group-blue button:hover {
 	background-color: #156398;
+}
+
+.btn-red {
+	color: #FFF;
+	background-color: #f16565;
+	border: 0 none;
+	border-bottom: 4px solid #ba4e4e;
+}
+
+.btn-red:hover {
+	background-color: #ba4e4e;
+	color: #FFF;
+	border-bottom: 4px solid #ba4e4e;
+}
+
+#generation-results {
+	background-color: rgba(37, 63, 81, 0.7);
+	min-height: 240px;
+	margin-top: 18px;
+	border-radius: 8px;
+	border: 1px solid #1b80c6;
+	padding: 15px;
+}
+
+#generation-results ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#generation-results ul li {
+	color: rgba(255,255,255,0.2);
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	border-bottom: 1px dashed rgba(255,255,255,0.2);
 }
