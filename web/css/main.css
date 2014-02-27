@@ -26,6 +26,10 @@ h1 {
 	line-height: 1;
 }
 
+label {
+	font-family: robotobold;
+}
+
 .pretty-radios-wrapper #namegeneratorform-race,
 .pretty-radios-wrapper #namegeneratorform-nametype {
 	display: none;
