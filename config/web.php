@@ -36,6 +36,7 @@ $config = [
 			'showScriptName' => false,
 			'rules' => [
 				'/' => 'default/index',
+				'/generate' => 'default/generate',
 				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
 			],
 		],

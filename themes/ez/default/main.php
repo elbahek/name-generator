@@ -1,11 +1,15 @@
 <?php
 /**
+ * @var yii\web\View $this
  * @var app\models\NameGeneratorForm $formModel
  */
 
+use app\assets\GenerateNamesAjaxAsset;
 use app\widgets\PrettyRadios;
 use yii\bootstrap\Button;
 use yii\widgets\ActiveForm;
+
+GenerateNamesAjaxAsset::register($this);
 ?>
 
 <div class="container-fluid">
@@ -43,6 +47,7 @@ use yii\widgets\ActiveForm;
 					'label' => 'Generate'/*Yii::t('main', 'Generate')*/,
 					'options' => [
 						'type' => 'button',
+						'id' => 'generate-names-submit',
 						'class' => 'btn-default btn-red pull-right',
 					]
 				]) ?>
@@ -51,18 +56,7 @@ use yii\widgets\ActiveForm;
 		</div>
 		<div class="col-lg-3">
 			<div id="generation-results">
-				<ul>
-					<li>Name 1</li>
-					<li>Name 2</li>
-					<li>Name 3</li>
-					<li>Name 4</li>
-					<li>Name 5</li>
-					<li>Name 6</li>
-					<li>Name 7</li>
-					<li>Name 8</li>
-					<li>Name 9</li>
-					<li>Name 10</li>
-				</ul>
+				<ul></ul>
 			</div>
 		</div>
 	</div>
