@@ -54,9 +54,9 @@ class NameGeneratorForm extends Model
 	public function attributeLabels()
 	{
 		return [
-			'race' => 'Race',
-			'nameType' => 'Name type',
-			'numberOfNames' => 'Number of names',
+			'race' => Yii::t('main', 'Race'),
+			'nameType' => Yii::t('main', 'Name type'),
+			'numberOfNames' => Yii::t('main', 'Number of names'),
 		];
 	}
 
@@ -66,12 +66,12 @@ class NameGeneratorForm extends Model
 	public function getRaces()
 	{
 		return [
-			static::RACE_HUMAN => 'Human'/* Yii::t('main', 'Human') */,
-			static::RACE_PELENG => 'Peleng'/* Yii::t('main', 'Peleng') */,
-			static::RACE_MALOC => 'Maloc'/* Yii::t('main', 'Maloc') */,
-			static::RACE_FEI => 'Fei'/* Yii::t('main', 'Fei') */,
-			static::RACE_GAAL => 'Gaal'/* Yii::t('main', 'Gaal') */,
-			static::RACE_DOMINATOR => 'Dominator'/* Yii::t('main', 'Dominator') */,
+			static::RACE_HUMAN => Yii::t('main', 'Human'),
+			static::RACE_PELENG => Yii::t('main', 'Peleng'),
+			static::RACE_MALOC => Yii::t('main', 'Maloc'),
+			static::RACE_FEI => Yii::t('main', 'Fei'),
+			static::RACE_GAAL => Yii::t('main', 'Gaal'),
+			static::RACE_DOMINATOR => Yii::t('main', 'Dominator'),
 		];
 	}
 
@@ -81,11 +81,11 @@ class NameGeneratorForm extends Model
 	public function getNameTypes()
 	{
 		return [
-			static::NAME_TYPE_ANY => 'Any'/* Yii::t('main', 'Any') */,
-			static::NAME_TYPE_PIRATE => 'Pirate'/* Yii::t('main', 'Pirate') */,
-			static::NAME_TYPE_RANGER => 'Ranger'/* Yii::t('main', 'Ranger') */,
-			static::NAME_TYPE_TRANSPORT => 'Transport'/* Yii::t('main', 'Transport') */,
-			static::NAME_TYPE_WARRIOR => 'Warrior'/* Yii::t('main', 'Warrior') */,
+			static::NAME_TYPE_ANY => Yii::t('main', 'Any'),
+			static::NAME_TYPE_PIRATE => Yii::t('main', 'Pirate'),
+			static::NAME_TYPE_RANGER => Yii::t('main', 'Ranger'),
+			static::NAME_TYPE_TRANSPORT => Yii::t('main', 'Transport'),
+			static::NAME_TYPE_WARRIOR => Yii::t('main', 'Warrior'),
 		];
 	}
 

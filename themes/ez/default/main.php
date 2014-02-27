@@ -15,9 +15,9 @@ GenerateNamesAjaxAsset::register($this);
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-lg-6 col-lg-offset-3">
-			<h1><?= 'Generate some names'/*Yii::t('main', 'Generate some names')*/ ?>...</h1>
+			<h1><?= Yii::t('main', 'Generate some names') ?>...</h1>
 		</div>
-		<div class="col-lg-3 col-lg-offset-3">
+		<div class="col-lg-4 col-lg-offset-3">
 			<?php $form = ActiveForm::begin([
 					'id' => 'generate-names-form',
 					'options' => ['class' => 'form-horizontal'],
@@ -41,20 +41,20 @@ GenerateNamesAjaxAsset::register($this);
 					'color' => 'blue',
 					'defaultOption' => $formModel->nameType,
 				]) ?>
-			<?= $form->field($formModel, 'numberOfNames', ['options' => ['class' => 'col-lg-12 form-group']]) ?>
+			<?= $form->field($formModel, 'numberOfNames', ['options' => ['class' => 'col-lg-6 form-group']]) ?>
 			<div class="form-group col-lg-12">
 				<?= Button::widget([
-					'label' => 'Generate'/*Yii::t('main', 'Generate')*/,
+					'label' => Yii::t('main', 'Generate'),
 					'options' => [
 						'type' => 'button',
 						'id' => 'generate-names-submit',
-						'class' => 'btn-default btn-red pull-right',
+						'class' => 'btn-default btn-red',
 					]
 				]) ?>
 			</div>
 			<?php ActiveForm::end() ?>
 		</div>
-		<div class="col-lg-3">
+		<div class="col-lg-2">
 			<div id="generation-results">
 				<ul></ul>
 			</div>

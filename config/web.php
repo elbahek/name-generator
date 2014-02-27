@@ -5,6 +5,7 @@ $params = require(__DIR__ . '/params.php');
 $config = [
 	'id' => 'basic',
 	'basePath' => dirname(__DIR__),
+	'language' => 'ru-RU',
 	'extensions' => require(__DIR__ . '/../vendor/yiisoft/extensions.php'),
 	'components' => [
 		'cache' => [
@@ -44,6 +45,16 @@ $config = [
 			'theme' => [
 				'pathMap' => ['@app/views' => '@app/themes/ez'],
 				'baseUrl' => '@app/themes/ez',
+			],
+		],
+		'i18n' => [
+			'translations' => [
+				'main' => [
+					'class' => 'yii\i18n\PhpMessageSource',
+					'fileMap' => [
+						'main' => 'main.php',
+					],
+				],
 			],
 		],
 	],
