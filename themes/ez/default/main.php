@@ -14,10 +14,10 @@ GenerateNamesAjaxAsset::register($this);
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-lg-6 col-lg-offset-3">
+		<div class="col-lg-8 col-lg-offset-2">
 			<h1><?= Yii::t('main', 'Generate some names') ?>...</h1>
 		</div>
-		<div class="col-lg-4 col-lg-offset-3">
+		<div class="col-lg-5 col-lg-offset-2">
 			<?php $form = ActiveForm::begin([
 					'id' => 'generate-names-form',
 					'options' => ['class' => 'form-horizontal'],
@@ -54,7 +54,7 @@ GenerateNamesAjaxAsset::register($this);
 			</div>
 			<?php ActiveForm::end() ?>
 		</div>
-		<div class="col-lg-2">
+		<div class="col-lg-3">
 			<div id="generation-results">
 				<ul></ul>
 			</div>
